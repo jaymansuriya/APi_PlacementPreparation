@@ -16,6 +16,7 @@ const product_details = async (req, res) => {
     try {
       
         const product = await Product.find({ch:Number(req.params.ch)});
+        console.log(req.params)
          console.log((req.params.ch))
          console.log(typeof(req.params.ch))
         res.json(product);
