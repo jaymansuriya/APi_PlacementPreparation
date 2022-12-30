@@ -28,9 +28,9 @@ const questionsByDifficulty = async (req, res) => {
         },
       },
       { $sample: { size: 30 } },
-      { $project: { o1: 0, o2: 0, o3: 0, o4: 0 } },
+      { $project: { o1: 0, o2: 0, o3: 0, o4: 0, answer_index :0, _id:0 } },
     ]);
-    console.log(req.params.difficulty);
+
     res.json(questions);
   } catch (error) {
     console.log(error);

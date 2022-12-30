@@ -42,7 +42,7 @@ const questionByCourseAndChapter = async (req, res) => {
         },
       },
 
-      { $project: { o1: 0, o2: 0, o3: 0, o4: 0 } }
+      { $project: { o1: 0, o2: 0, o3: 0, o4: 0, answer_index :0 } }
     ]);
     console.log(req.params);
     res.json(questions);

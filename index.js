@@ -14,7 +14,6 @@ mongoose.connect(
 );
 
 // Import routes
-const productRoutes = require("./routes/product");
 const courseRoutes = require("./routes/course");
 const chapterRoutes = require("./routes/chapter");
 const practiceQuestionRoutes = require("./routes/practiceQuestion");
@@ -26,7 +25,6 @@ app.use(express.json());
 app.use(cors());
 
 // route Middlewares
-app.use("/api/products", productRoutes);
 app.use("/api/courses",courseRoutes);
 app.use("/api/chapters",chapterRoutes);
 app.use("/api/practiceQuestion",practiceQuestionRoutes);
